@@ -2,30 +2,31 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <script src="fichier.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="parametre.js" defer></script>
     </head>
     <body>
-    <input  type="button" value="dé pour avancer " onclick="lance_de_de_avance();" />
-    <input  type="button" value="dé pour recharger  " onclick="lance_de_de_recharge();" />
-    case
-    <span id="case"> </span>
+    <input  type="button"  id="jouer" value="jouer" onclick="jouer();" />
+    <input  type="button" id="dé" value="dé pour avancer" onclick="lance_de_de_avance();" disabled/>
+    <input  type="button" id="dée" value="dé pour recharger" onclick="lance_de_de_recharge();"disabled />
+    <form action="parametre.php">
+      <button type="submit" id="para" >parametre</button>
+    </form>
     <br>
-    dé
+    case du joueur1:
+    <span id="case1"> </span>
+    <br>
+    charge 1 :
+    <span id="charge1"> </span>
+    <br>
+    case du joueur2:
+    <span id="case2"> </span>
+    <br>
+    charge 2:
+    <span id="charge2"> </span>
+    <br>
+    de:
     <span id="de"> </span>
     <br>
-    charge
-    <span id="charge"> </span>
-    <br>
-    entree tunnel
-    <span id="et"> </span>
-    <br>
-    sortie tunnel
-    <span id="st"> </span>
-    <br>
-    case montee
-    <span id="cm"> </span>
-    <br>
-    case descente
-    <span id="cd"> </span>
     </body>
 </html>
