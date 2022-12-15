@@ -1,18 +1,25 @@
+
 <!DOCTYPE html>
 <html>
     <head>
-        <!-- head definitions go here -->
+    <script src="fichier.js" defer></script>
     </head>
     <body>
-        
-       <?php 
-        $plateau = [17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29,
-            16, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 30,
-            15, 46, 99, 99, 99, 99, 99, 99, 99, 99, 99, 58, 31,
-            14, 45, 99, 99, 66, 65, 64, 63, 62, 61, 60, 59, 32,
-            13, 44, 43, 42, 41, 40, 39, 38, 37, 36, 35, 34, 33,
-            12, 11, 10,  9,  8,  7,  6,  5,  4,  3,  2,  1,  0]
-
-       ?>
+    <input  type="button" value="dé pour avancer " onclick="lance_de_de_avance();" />
+    <input  type="button" value="dé pour recharger  " onclick="lance_de_de_recharge();" />
+    case
+    <span id="case"> </span>
+    dé
+    <span id="de"> </span>
+    charge
+    <span id="charge"> </span>
+    entree tunnel
+    <span id="et"> </span>
+    sortie tunnel
+    <span id="st"> </span>
+    case montee
+    <span id="cm"> </span>
+    case descente
+    <span id="cd"> </span>
     </body>
 </html>
