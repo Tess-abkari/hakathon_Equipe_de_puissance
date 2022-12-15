@@ -12,7 +12,7 @@ if (is_array($match)) {
     $params = $match['params'];
     require "View/{$match['target']}.php";
 } else {
-   // require "View/404.html";
+   echo "404";
 }
 
 ?>
