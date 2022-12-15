@@ -2,6 +2,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <script src="vehicule.js" defer></script>
     <script src="script.js" defer></script>
     <script src="parametre.js" defer></script>
     </head>
