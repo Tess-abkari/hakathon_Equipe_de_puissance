@@ -1,5 +1,5 @@
 # hakathon_Equipe_de_puissance
-Défi ED
+Défi EDF
 
 Equipe N°07
 

@@ -1,0 +1,25 @@
+{
+    "name": "hackathon/equipe_de_puissance",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Hackathon\\EquipeDePuissance\\": "src/"
+        }
+    },
+    "require": {
+        "altorouter/altorouter": "^2.0"
+    },
+    "authors": [{
+        "name": "Ragiot Hugo",
+        "role": "Team Lead"
+    },
+    {
+        "name": "Tess",
+        "role": ""
+    },
+    {
+        "name": "Olivier Tom",
+        "role": ""
+    }
+]
+}
