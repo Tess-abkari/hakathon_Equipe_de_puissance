@@ -69,8 +69,8 @@
    <span id="gagne"> </span>
 
    <div>
+      <h5 align="center">Etat du Systeme pour la recharge : </h5>
       <h5 id="api" align="center"/>
-      <h6 id="heure" align="center" />
    </div>
 
 </body>
