@@ -6,10 +6,10 @@
       <script src="../Scripts/vehicule.js" defer></script>
       <script src="../Scripts/script.js" defer></script>
       <script src="../Scripts/parametre.js" defer></script>
-      <script src="../Scripts/plateauu.js" defer></script>
+      <script src="../Scripts/plateau.js" defer></script>
       <script src="../Scripts/test.js" defer></script>
            
-      <link rel="stylesheet" href="../style/styles.css">
+      <link rel="stylesheet" href="../styles/styles.css">
    </head>
    <body>
       <input  type="button"  id="jouer" value="jouer" width="100px" onclick="jouer();" />

@@ -17,33 +17,65 @@ function generateTable() {
         array.forEach(function (items) {
             if (items !== 99) {
                 const cell = document.createElement("td");
-                console.log(tableau_descente)
+                
 
                 var img = document.createElement("img");
-                img.src = "../pp1.png";
+                img.src = "../Styles/pp1.png";
                 img.id=items.toString();
                 img.height="10px";
                 const cellText = document.createTextNode(items.toString());
                 cell.appendChild(cellText);
                 cell.appendChild(img);
-                if (tableau_descente.includes(items))
+                // case vertical 
+                var tab_v=[13,14,15,16,46,45,58,30,31,32]
+
+                if (items==12 || items==44)
+                {// angle en bas gauche 
+                    cell.style.backgroundImage='url("../styles/chemin_droit1.jpg")';
+                    
+                }
+                else if (items==47 || items==17)
+                {// angle en bas gauche 
+                    cell.style.backgroundImage='url("../styles/chemin_gh.jpg")';
+                    
+                }
+                else if (items==29 || items==57)
+                {// angle en haut droit
+                    cell.style.backgroundImage='url("../styles/chemin_dh.jpg")';
+                    
+                }
+                else if (items==59 || items==33)
+                {// angle en bas droit 
+                    cell.style.backgroundImage='url("../styles/chemin_db.jpg")';
+                    
+                }
+                else if (tab_v.includes(items) )
                 {
-                    cell.style.backgroundColor="rgb(0, 0, 200)";
+                    cell.style.backgroundImage='url("../styles/chemin_vertical.jpg")';
+                    
+                }
+                else{
+                    cell.style.backgroundImage='url("../styles/chemin_droit.jpg")';
+                    
+                }
+                if (tableau_descente.includes(items))
+                {  cell.style.backgroundImage=null;
+                    
+                    cell.style.backgroundColor="rgb(0, 0, 250)";
+
                 }
                 else if (tableau_montee.includes(items))
-                {
+                {cell.style.backgroundImage=null;
                     cell.style.backgroundColor="rgb(200, 0, 0)";
+                    
                 }
                 else if (tableau_entre_tunnel.includes(items))
-                {
+                {cell.style.backgroundImage=null;
                     cell.style.backgroundColor="rgb(0, 255, 0)";
                 }
                 else if (tableau_sortie_tunnel.includes(items))
-                {
+                {cell.style.backgroundImage=null;
                     cell.style.backgroundColor="rgb(50, 200, 50)";
-                }
-                else{
-                    cell.style.backgroundColor="rgb(229, 151, 63)";
                 }
                 row.appendChild(cell);
                 
