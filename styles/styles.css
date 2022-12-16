@@ -82,3 +82,12 @@ td {
       7px 7px 20px 0px #0002,
       4px 4px 5px 0px #0001;
 }
+
+.container-row {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: row;
+  padding: 2px;
+  margin-left: 450px;
+  
+}

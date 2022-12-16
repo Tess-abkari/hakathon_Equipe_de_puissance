@@ -47,30 +47,30 @@
       <div class=" container" align="center">
       <input type="button" class="button-play" id="jouer" value="jouer" width="100px" onclick="jouer();" />
       <br />
-      <form action="parametre.php">
-         <button type="submit" id="para" class="btn-1">parametre</button>
+   </div>
+
+   <div class="container-row" align="center">
+   <form action="parametre.php">
+         <button type="submit" id="para" class="btn btn-outline-dark">parametre</button>
       </form>
-      <br />
       <form action="choix.php">
-         <button type="submit" id="choix" class="">choix vehicule</button>
+         <button type="submit" id="choix" class="btn btn-outline-dark">choix vehicule</button>
       </form>
       <form action="statistique.php">
-         <button type="submit" id="choix" class="">statistique</button>
+         <button type="submit" id="choix" class="btn btn-outline-dark">statistique</button>
       </form>
-      <input type="button" value="lancer la 3D " onclick="d3();" />
+      <input type="button" value="lancer la 3D" class="btn btn-outline-dark"onclick="d3();" />
    </div>
-   <div class="container" align="left">
-      <input type="button" id="dé" value="dé pour avancer" onclick="lance_de_de_avance();" disabled />
-   </div>
-   <div class="container" align="right">
-      <input type="button" id="dée" value="dé pour recharger" onclick="lance_de_de_recharge();" disabled />
-   </div>
+
+   <div class="container" align="center">
+      <input type="button" id="dé" class="btn btn-outline-dark" value="dé pour avancer" onclick="lance_de_de_avance();" disabled />
+      <input type="button" id="dée" class="btn btn-outline-dark" value="dé pour recharger" onclick="lance_de_de_recharge();" disabled />
    </div>
    <span id="gagne"> </span>
 
    <div>
-      <h3 id="api" />
-      <h5 id="heure" />
+      <h5 id="api" align="center"/>
+      <h6 id="heure" align="center" />
    </div>
 
 </body>
