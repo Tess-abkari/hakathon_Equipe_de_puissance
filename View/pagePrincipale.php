@@ -14,6 +14,7 @@
    <link rel="stylesheet" href="../styles/styles.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
+
 <body>
    <div class="container-fluid" align="center">
       <h6>Hackathon 2022 - Equipe de Puissance</h6>
@@ -45,7 +46,7 @@
    <div class="container-fluid"">
       <div class=" container" align="center">
       <input type="button" class="button-play" id="jouer" value="jouer" width="100px" onclick="jouer();" />
-      <br/>
+      <br />
       <form action="parametre.php">
          <button type="submit" id="para" class="btn-1">parametre</button>
       </form>
@@ -56,7 +57,7 @@
       <form action="statistique.php">
          <button type="submit" id="choix" class="">statistique</button>
       </form>
-      <input  type="button" value="lancer la 3D " onclick="d3();" />
+      <input type="button" value="lancer la 3D " onclick="d3();" />
    </div>
    <div class="container" align="left">
       <input type="button" id="dé" value="dé pour avancer" onclick="lance_de_de_avance();" disabled />
@@ -66,5 +67,12 @@
    </div>
    </div>
    <span id="gagne"> </span>
+
+   <div>
+      <h3 id="api" />
+      <h5 id="heure" />
+   </div>
+
 </body>
+
 </html>

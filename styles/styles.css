@@ -1,42 +1,42 @@
+table {
+  margin: auto;
+  text-align: center;
 
-table{
-    margin:auto;
-    text-align:center;
-    
-    
+
 }
+
 tr {
-    width: 30%;
-    height:30%;
-    border-collapse : collapse;
-    
-    
+  width: 30%;
+  height: 30%;
+  border-collapse: collapse;
+
+
 }
 
 td {
-    padding: 15px;
-    margin: 20px;
-    border: 1px solid rgba(255, 255, 255, 1);
-    color: rgb(0, 0, 0);
-    width: 30px;
-    height: 30px;
-    border-radius:10px;
-    font-size: large;
+  padding: 15px;
+  margin: 20px;
+  border: 1px solid rgba(255, 255, 255, 1);
+  color: rgb(0, 0, 0);
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  font-size: large;
 }
 
 td[id="99"] {
-    background-color:white;
-    color: #fff;
-    border: none;
+  background-color: white;
+  color: #fff;
+  border: none;
 }
 
-td{
-    margin-bottom: 100px;
+td {
+  margin-bottom: 100px;
 }
 
 .button-play {
   align-items: center;
-  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+  background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
   border: 0;
   border-radius: 8px;
   box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
@@ -66,19 +66,19 @@ td{
 
 @media (min-width: 768px) {
   .button-play {
-    font-size: 24px;
-    min-width: 196px;
+      font-size: 24px;
+      min-width: 196px;
   }
 }
 
 .btn-1 {
-    transition: all 0.3s ease;
-  }
+  transition: all 0.3s ease;
+}
 
-  .btn-1:hover {
-     box-shadow:
-     -7px -7px 20px 0px #fff9,
-     -4px -4px 5px 0px #fff9,
-     7px 7px 20px 0px #0002,
-     4px 4px 5px 0px #0001;
-  }
+.btn-1:hover {
+  box-shadow:
+      -7px -7px 20px 0px #fff9,
+      -4px -4px 5px 0px #fff9,
+      7px 7px 20px 0px #0002,
+      4px 4px 5px 0px #0001;
+}
