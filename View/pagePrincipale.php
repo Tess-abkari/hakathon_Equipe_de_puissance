@@ -6,10 +6,10 @@
       <script src="../Scripts/vehicule.js" defer></script>
       <script src="../Scripts/script.js" defer></script>
       <script src="../Scripts/parametre.js" defer></script>
-      <script src="../Scripts/plateau.js" defer></script>
+      <script src="../Scripts/plateauu.js" defer></script>
       <script src="../Scripts/test.js" defer></script>
            
-      <link rel="stylesheet" href="../style/style.css">
+      <link rel="stylesheet" href="../style/styles.css">
    </head>
    <body>
       <input  type="button"  id="jouer" value="jouer" width="100px" onclick="jouer();" />
@@ -25,28 +25,23 @@
      <table>
       <tr>
          <td> case du joueur1:</td>
-         <td><span id="case1"> </span></td>
-      </tr>
-      <tr>
          <td> charge 1 :</td>
-         <td><span id="charge1"> </span></td>
-      </tr>
-      <tr>
          <td> case du joueur2:</td>
-         <td> <span id="case2"> </span></td>
-      </tr>
-      <tr>
          <td> charge 2:</td>
-         <td><span id="charge2"> </span></td>
-      </tr>
-      <tr>
          <td> de:</td>
-         <td> <span id="de"> </span></td>
-      </tr>      
-      <tr>
          <td> time:</td>
-         <td> <span id="time" name ="time"> </span></td>
       </tr>
+      <tr>
+      <td><span id="case1"style="font-size:18px"> </span></td>
+         <td><span id="charge1" style="font-size:18px"> </span></td>
+         <td> <span id="case2"style="font-size:18px"> </span></td>
+         <td> <span id="charge2"style="font-size:18px"> </span></td>
+         <td> <span id="de"style="font-size:18px"> </span></td>
+         <td><span id="time" name ="time" style="font-size:18px"> </span></td>
+      
+      
+      </tr>
+
       <span id="gagne"> </span>
    
 
