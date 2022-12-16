@@ -1,6 +1,7 @@
 function generateTable() {
     // creates a <table> element and a <tbody> element
     const tbl = document.createElement("table");
+    tbl.id="map";
     const tblBody = document.createElement("tbody");
 
     const plateau = [[17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29],

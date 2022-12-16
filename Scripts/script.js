@@ -28,6 +28,10 @@ var plateau = [
     var horloge_plateau = 0;
 var consiel = 1;
 
+
+// variable pour les stat
+var tab_nombre_de_coup=[];
+var tab_nombre_de_charge=[];
 //--------------fonction ---------------
 
 function lance_de_de_recharge() {
@@ -39,6 +43,8 @@ function lance_de_de_recharge() {
     } else {
         nb = Math.floor(Math.random() * 3) + 1;
     }
+    joueur.nombre_coup_charge+=1;
+    joueur.nombre_coup_jouer+=1;
     recharge_du_pion(nb);
     document.getElementById("time").innerHTML = horloge_plateau;
 
@@ -69,7 +75,7 @@ function lance_de_de_avance() { // apres clique sur le bouton d'avancer
     document.getElementById("charge2").innerHTML = ordinateur.charge;
     // pour mettre le image lors du deplacement du click 
     var e = document.getElementById(joueur.case_pion);
-   console.log("dfdfds",joueur.name)
+   joueur.nombre_coup_jouer+=1;
     if (sessionStorage.getItem('joueur1')=="moto"  && joueur.name=="j1"|| sessionStorage.getItem('ordinateur')=="moto" && joueur.name=="ordi"){
         e.src = "../img_vehicule/moto.jpg";
     }
@@ -103,6 +109,14 @@ function remettre_en_forme()
     
     e.style.height="0px";
     e.style.width="0px";
+ 
+}
+function reinitialise()
+{   tab_nombre_de_coup+=[joueur.nombre_coup_jouer]
+    console.log(joueur.nombre_coup_jouer)
+    sessionStorage.setItem('nb',tab_nombre_de_coup)
+    tab_nombre_de_charge+=[joueur.nombre_coup_charge]
+    sessionStorage.setItem('nb_charge',tab_nombre_de_charge)
 
 }
 function deplacement_du_pion(numero_du_de) { //fonction de deplacement de pion 
@@ -122,6 +136,7 @@ function deplacement_du_pion(numero_du_de) { //fonction de deplacement de pion
             document.getElementById("gagne").innerHTML = "le joueur2  gagne ";
     
         }
+        reinitialise();
         
     }
     let point_charge=0
@@ -322,6 +337,6 @@ creation_des_case_spe()
 
 
 //TODO
-//faire la state
+
 //faire du tree.js
 // verification nombre tunnel ect..

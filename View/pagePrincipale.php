@@ -9,6 +9,8 @@
    <script src="../Scripts/script.js" defer></script>
    <script src="../Scripts/parametre.js" defer></script>
    <script src="../Scripts/plateau.js" defer></script>
+   <script src="../Scripts/3D_jeuu.js" defer></script>
+   <script src="../Three.js"></script>
    <link rel="stylesheet" href="../styles/styles.css">
    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
@@ -51,6 +53,10 @@
       <form action="choix.php">
          <button type="submit" id="choix" class="">choix vehicule</button>
       </form>
+      <form action="statistique.php">
+         <button type="submit" id="choix" class="">statistique</button>
+      </form>
+      <input  type="button" value="lancer la 3D " onclick="d3();" />
    </div>
    <div class="container" align="left">
       <input type="button" id="dé" value="dé pour avancer" onclick="lance_de_de_avance();" disabled />

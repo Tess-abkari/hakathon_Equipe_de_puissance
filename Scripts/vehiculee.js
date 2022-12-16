@@ -10,7 +10,7 @@ class voiture {
   }
 class bus {
     constructor(name) {
-      this.case_pion = 0;
+      this.case_pion = 60;
       this.charge = 10;
       this.max_charge=10;
       this.nombre_coup_jouer=0;
