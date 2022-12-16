@@ -17,18 +17,19 @@ function generateTable() {
         array.forEach(function (items) {
             if (items !== 99) {
                 const cell = document.createElement("td");
-                
+                    
 
                 var img = document.createElement("img");
-                img.src = "../Styles/pp1.png";
+                img.src = "../img_vehicule/voiture.jpg";
                 img.id=items.toString();
-                img.height="10px";
+                img.height="400px";
+                
                 const cellText = document.createTextNode(items.toString());
                 cell.appendChild(cellText);
                 cell.appendChild(img);
                 // case vertical 
                 var tab_v=[13,14,15,16,46,45,58,30,31,32]
-
+                console.log("tot")
                 if (items==12 || items==44)
                 {// angle en bas gauche 
                     cell.style.backgroundImage='url("../styles/chemin_droit1.jpg")';
@@ -50,7 +51,7 @@ function generateTable() {
                     
                 }
                 else if (tab_v.includes(items) )
-                {
+                {   
                     cell.style.backgroundImage='url("../styles/chemin_vertical.jpg")';
                     
                 }
@@ -58,7 +59,7 @@ function generateTable() {
                     cell.style.backgroundImage='url("../styles/chemin_droit.jpg")';
                     
                 }
-                if (tableau_descente.includes(items))
+                 if (tableau_descente.includes(items))
                 {  cell.style.backgroundImage=null;
                     
                     cell.style.backgroundColor="rgb(0, 0, 250)";
@@ -67,7 +68,6 @@ function generateTable() {
                 else if (tableau_montee.includes(items))
                 {cell.style.backgroundImage=null;
                     cell.style.backgroundColor="rgb(200, 0, 0)";
-                    
                 }
                 else if (tableau_entre_tunnel.includes(items))
                 {cell.style.backgroundImage=null;

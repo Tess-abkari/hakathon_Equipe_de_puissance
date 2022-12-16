@@ -67,6 +67,18 @@ function lance_de_de_avance() { // apres clique sur le bouton d'avancer
     document.getElementById("case2").innerHTML = ordinateur.case_pion;
     document.getElementById("charge1").innerHTML = joueur1.charge;
     document.getElementById("charge2").innerHTML = ordinateur.charge;
+    // pour mettre le image lors du deplacement du click 
+    var e = document.getElementById(joueur.case_pion);
+   console.log("dfdfds",joueur.name)
+    if (sessionStorage.getItem('joueur1')=="moto"  && joueur.name=="j1"|| sessionStorage.getItem('ordinateur')=="moto" && joueur.name=="ordi"){
+        e.src = "../img_vehicule/moto.jpg";
+    }
+    if (sessionStorage.getItem('joueur1')=="bus" && joueur.name=="j1"||  sessionStorage.getItem('ordinateur')=="bus"&& joueur.name=="ordi"){
+        e.src = "../img_vehicule/bus.jpg";
+    }
+    if (sessionStorage.getItem('joueur1')=="voiture" && joueur.name=="j1"||  sessionStorage.getItem('ordinateur')=="voiture"&& joueur.name=="ordi" ){
+        e.src = "../img_vehicule/voiture.jpg";
+    }
 
 }
 
@@ -87,10 +99,11 @@ function mettre_en_forme()
 function remettre_en_forme()
 {
     var e = document.getElementById(joueur.case_pion);
-    console.log(e)  
-    e.style.backgroundColor=null;
+
+    
     e.style.height="0px";
     e.style.width="0px";
+
 }
 function deplacement_du_pion(numero_du_de) { //fonction de deplacement de pion 
     
@@ -199,15 +212,15 @@ function creation_des_case_spe() {
 
 function creation_type_joueur1()
 {
-    if(sessionStorage.getItem('joueur1')=="moto"){return new moto();}
-    if(sessionStorage.getItem('joueur1')=="voiture"){return new voiture();}
-    if(sessionStorage.getItem('joueur1')=="bus"){return new bus();}
+    if(sessionStorage.getItem('joueur1')=="moto"){return new moto("j1");}
+    if(sessionStorage.getItem('joueur1')=="voiture"){return new voiture("j1");}
+    if(sessionStorage.getItem('joueur1')=="bus"){return new bus("j1");}
 }
 function creation_type_joueur2()
 {
-    if(sessionStorage.getItem('ordinateur')=="moto"){return new moto();}
-    if(sessionStorage.getItem('ordinateur')=="voiture"){return new voiture();}
-    if(sessionStorage.getItem('ordinateur')=="bus"){return new bus();}
+    if(sessionStorage.getItem('ordinateur')=="moto"){return new moto("ordi");}
+    if(sessionStorage.getItem('ordinateur')=="voiture"){return new voiture("ordi");}
+    if(sessionStorage.getItem('ordinateur')=="bus"){return new bus("ordi");}
 }
 function jouer()
 {   
@@ -218,13 +231,13 @@ function jouer()
         sessionStorage.setItem("mode", "solo")
     }
     if (sessionStorage.getItem('joueur1') == null) {
-        joueur1 = new voiture();
+        joueur1 = new voiture("j1");
     }
     else{
         joueur1=creation_type_joueur1();
     }
     if (sessionStorage.getItem('ordinateur') == null) {
-        ordinateur = new voiture();
+        ordinateur = new voiture("j2");
     
     }else{
          ordinateur=creation_type_joueur2();
@@ -237,7 +250,7 @@ function jouer()
         document.getElementById("dée").disabled = false;
         document.getElementById("para").disabled = true;
         joueur = joueur1;
-        placement_pion();
+        
     } else if (sessionStorage.getItem('mode') == "multi") {
         if (flag == 0) {
             joueur = joueur1;
@@ -281,25 +294,30 @@ function jouer()
         }
     }
     var e = document.getElementById(joueur.case_pion);
-    console.log(e)  
-    e.style.backgroundColor="pink"
     e.style.height="30px";
     e.style.width="30px";
-    document.getElementById("choix").disabled = true;
+    console.log(sessionStorage.getItem('joueur1'))
 
+   
+    document.getElementById("choix").disabled = true;
+    console.log(sessionStorage.getItem('joueur1'),joueur.name)
+    // pour mettre le image lors du deplacement du click 
+    if (sessionStorage.getItem('joueur1')=="moto"&& joueur.name=="j1" || sessionStorage.getItem('ordinateur')=="moto" && joueur.name=="ordi"){
+        console.log("motooo")
+        e.src = "../img_vehicule/moto.jpg";
+    }
+    else if (sessionStorage.getItem('joueur1')=="bus" && joueur.name=="j1"||  sessionStorage.getItem('ordinateur')=="bus" && joueur.name=="ordi"){
+        console.log("vuuuuu")
+        e.src = "../img_vehicule/bus.jpg";
+    }
+    else if (sessionStorage.getItem('joueur1')=="voiture" && joueur.name=="j1"||  sessionStorage.getItem('ordinateur')=="voiture" && joueur.name=="ordi" ){
+        console.log("vooiture")
+        e.src = "../img_vehicule/voiture.jpg";
+    }
+    else{console.log("toto")
+        console.log(sessionStorage.getItem('ordinateur'))}
 }
-function placement_pion()
-{
-    plateau.forEach(function (array) {
-        array.forEach(function (items) {
-            if (items==joueur.case_pion)
-            {
-                console.log()
-            }
-        });
-  
-    });
-}
+
 creation_des_case_spe()
 
 
