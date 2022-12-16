@@ -3,14 +3,18 @@
 <!DOCTYPE html>
 <html>
    <head>
-      <script src="vehicule.js" defer></script>
-      <script src="script.js" defer></script>
-      <script src="parametre.js" defer></script>
+      <script src="../Scripts/vehicule.js" defer></script>
+      <script src="../Scripts/script.js" defer></script>
+      <script src="../Scripts/parametre.js" defer></script>
+      <script src="../Scripts/plateau.js" defer></script>
+      <script src="../Scripts/test.js" defer></script>
+           
+      <link rel="stylesheet" href="../style/style.css">
    </head>
    <body>
-      <input  type="button"  id="jouer" value="jouer" onclick="jouer();" />
+      <input  type="button"  id="jouer" value="jouer" width="100px" onclick="jouer();" />
       <input  type="button" id="dé" value="dé pour avancer" onclick="lance_de_de_avance();" disabled/>
-      <input  type="button" id="dée" value="dé pour recharger" onclick="lance_de_de_recharge();"disabled />
+      <input  type="button" id="dée" value="dé pour recharger"  onclick="lance_de_de_recharge();"disabled />
       <form action="parametre.php">
          <button type="submit" id="para" >parametre</button>
       </form>

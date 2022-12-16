@@ -2,9 +2,9 @@
 <!DOCTYPE html>
 <html>
     <head>
-    <script src="vehicule.js" defer></script>
-    <script src="script.js" defer></script>
-    <script src="parametre.js" defer></script>
+    <script src="../Scripts/vehicule.js" defer></script>
+    <script src="../Scripts/script.js" defer></script>
+    <script src="../Scripts/parametre.js" defer></script>
     </head>
     <body>
     <h1>joueur1<h1>
